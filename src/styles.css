@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  /* ### Primary */
+  --softred: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  /* ### Primary */
+
+  /* ### Neutral */
+  --darkbrown: hsl(25, 47%, 15%);
+  --mediumbrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --verypaleorange: hsl(33, 100%, 98%);
+  /* ### Neutral */
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif; /* 400, 700*/
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.attribution a:hover {
+  color: var(--softred);
+}
