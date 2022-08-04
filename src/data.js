@@ -1,5 +1,5 @@
 let data;
-export default data = [
+data = [
   {
     day: "mon",
     amount: 17.45,
@@ -29,3 +29,5 @@ export default data = [
     amount: 25.48,
   },
 ];
+
+export default data;

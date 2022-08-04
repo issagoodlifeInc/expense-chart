@@ -17,7 +17,7 @@ export default function Main(props) {
     let dayStyles = {
       height: `${day.amount * 3}px`,
       width: "50px",
-      backgroundColor: "red",
+      backgroundColor: "var(--softred)",
     };
     return (
       <div className="day">
@@ -32,7 +32,7 @@ export default function Main(props) {
       <h1 className="main--title">Spending - Last 7 days</h1>
       <section className="graph">{days}</section>
       <hr />
-      <div className=" flex">
+      <div className=" flex main--body">
         <div className="total-month">
           <p className="main--text">Total this month</p>
           <h2 className="main--cost">$478.33</h2>

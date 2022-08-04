@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+  margin: 0;
   box-sizing: border-box;
 }
 :root {
@@ -18,8 +19,64 @@
 }
 
 body {
-  margin: 0;
   font-family: "DM Sans", sans-serif; /* 400, 700*/
+  background: var(--cream);
+}
+
+p {
+  color: var(--mediumbrown);
+}
+
+hr {
+  height: 1px;
+  color: var(--cream);
+}
+
+.container {
+  width: 95%;
+  margin: 2rem auto;
+  max-width: 500px;
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background: var(--softred);
+  color: var(--verypaleorange);
+}
+
+.header--text,
+.header--title {
+  color: var(--verypaleorange);
+}
+
+.header--title {
+  padding: 0.4rem 0;
+  font-size: 1.8rem;
+}
+
+main {
+  background: var(--verypaleorange);
+}
+.graph {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: last baseline;
+  padding: 1.8rem 0;
+}
+
+.main--body {
+  padding: 1.5rem 0;
+}
+
+.amount--day {
+  border-radius: 5px;
 }
 
 .attribution {
