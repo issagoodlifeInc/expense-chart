@@ -49,6 +49,7 @@ hr {
 header {
   background: var(--softred);
   color: var(--verypaleorange);
+  margin-top: 15vh !important;
 }
 
 .header--text,
@@ -76,7 +77,13 @@ main {
 }
 
 .amount--day {
+  cursor: pointer;
+  transition: all 0.7s ease-out;
   border-radius: 5px;
+}
+.amount--day:hover {
+  background: linear-gradient(110deg, var(--softred), var(--cream)) !important;
+  transform: scale(0.9);
 }
 
 .attribution {
