@@ -4,7 +4,7 @@
   "description": "Expense Chart Component",
   "main": "index.js",
   "scripts": {
-    "build": "CI false react-scripts build",
+    "build": "CI=false react-scripts build",
     "start": "react-scripts start"
   },
   "author": "Lesley Kimutai",
