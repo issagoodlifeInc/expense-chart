@@ -1,3 +1,4 @@
+import { useState } from "react";
 import data from "../data";
 
 export default function Main(props) {
@@ -11,17 +12,37 @@ export default function Main(props) {
   // console.log(getData());
   // getData();
 
+  const [showAmount, setShowAmount] = useState(false);
+
   console.log(data);
+
+  const currentDay = new Date().getDay();
+  console.log(currentDay);
+
+  let amountShownStyle = {
+    position: "absolute",
+    top: "0",
+    backgroundColor: "var(--darkbrown)",
+    padding: ".2rem",
+    color: "var(--verypaleorange)",
+  };
 
   const days = data.map((day) => {
     let dayStyles = {
+      position: "relative",
       height: `${day.amount * 3}px`,
       width: "50px",
       backgroundColor: "var(--softred)",
     };
     return (
-      <div className="day">
-        <div className="amount--day" style={dayStyles}></div>
+      <div key={day.id} className="day">
+        <div
+          className="amount--day"
+          style={dayStyles}
+          onMouseEnter={() => setShowAmount(true)}
+          onMouseLeave={() => setShowAmount(false)}
+        ></div>
+        {showAmount && <div style={amountShownStyle}>{day.amount}</div>}
         <p className="amount--text">{day.day}</p>
       </div>
     );
