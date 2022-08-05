@@ -14,26 +14,38 @@ export default function Main(props) {
 
   const [showAmount, setShowAmount] = useState(false);
 
-  console.log(data);
+  // console.log(data);
 
   const currentDay = new Date().getDay();
   console.log(currentDay);
 
+  // Styles to render the amount on top of each day onHover
   let amountShownStyle = {
     position: "absolute",
-    top: "0",
+    // top: "0",
     backgroundColor: "var(--darkbrown)",
     padding: ".2rem",
     color: "var(--verypaleorange)",
   };
 
   const days = data.map((day) => {
+    // Styles for all the graph elements
     let dayStyles = {
       position: "relative",
       height: `${day.amount * 3}px`,
       width: "50px",
       backgroundColor: "var(--softred)",
     };
+
+    if (currentDay === day.id) {
+      dayStyles = {
+        position: "relative",
+        height: `${day.amount * 3}px`,
+        width: "50px",
+        backgroundColor: "var(--cyan)",
+      };
+    }
+
     return (
       <div key={day.id} className="day">
         <div
