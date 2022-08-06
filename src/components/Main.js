@@ -22,10 +22,21 @@ export default function Main(props) {
   // Styles to render the amount on top of each day onHover
   let amountShownStyle = {
     position: "absolute",
-    // top: "0",
+    display: "none",
     backgroundColor: "var(--darkbrown)",
-    padding: ".2rem",
+    padding: ".2rem .4rem",
     color: "var(--verypaleorange)",
+    borderRadius: "5px",
+  };
+
+  const displayAmount = () => {
+    const popup = document.querySelector(".amount--show");
+    popup.style.display = "block";
+  };
+
+  const hideAmount = () => {
+    const popup = document.querySelector(".amount--show");
+    popup.style.display = "none";
   };
 
   const days = data.map((day) => {
@@ -51,10 +62,15 @@ export default function Main(props) {
         <div
           className="amount--day"
           style={dayStyles}
-          onMouseEnter={() => setShowAmount(true)}
-          onMouseLeave={() => setShowAmount(false)}
+          onMouseOver={() => displayAmount()}
+          // onMouseEnter={() => setShowAmount(true)}
+          // onMouseLeave={() => setShowAmount(false)}
+          onMouseLeave={() => hideAmount()}
         ></div>
-        {showAmount && <div style={amountShownStyle}>{day.amount}</div>}
+        {/* {showAmount && <div style={amountShownStyle}>{day.amount}</div>} */}
+        <div className="amount--show" style={amountShownStyle}>
+          {day.amount}
+        </div>
         <p className="amount--text">{day.day}</p>
       </div>
     );
@@ -68,10 +84,10 @@ export default function Main(props) {
       <div className=" flex main--body">
         <div className="total-month">
           <p className="main--text">Total this month</p>
-          <h2 className="main--cost">$478.33</h2>
+          <p className="main--cost">$478.33</p>
         </div>
         <div className="difference">
-          <h3 className="h3 percentage-difference">+2.4%</h3>
+          <p className="percentage-difference">+2.4%</p>
           <p className="difference-p">from last month</p>
         </div>
       </div>

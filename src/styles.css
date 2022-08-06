@@ -16,6 +16,8 @@
   --cream: hsl(27, 66%, 92%);
   --verypaleorange: hsl(33, 100%, 98%);
   /* ### Neutral */
+
+  --amount-value: "$22.4";
 }
 
 body {
@@ -85,6 +87,41 @@ main {
 .amount--day:hover {
   background: linear-gradient(110deg, var(--softred), var(--cream)) !important;
   transform: scale(0.9);
+}
+
+/* SHOW AMOUNT ON HOVER */
+
+/* .bar {
+  position: relative;
+  /* other bar styles */
+/* } */
+
+.amount--day::after {
+  /* content: var(--amount-value); */
+  /* position: absolute; */
+  /* opacity: 0; hide by default */
+  /* whatever styles you want for the amount box */
+}
+
+.amount--day:hover::after {
+  /* make it visible on hover */
+  /* opacity: 1; */
+}
+
+/* SHOW AMOUNT ON HOVER */
+
+.main--cost,
+.percentage-difference {
+  color: var(--darkbrown);
+  font-weight: 700;
+}
+
+.main--cost {
+  font-size: 2.5rem;
+}
+
+.percentage-difference {
+  text-align: right;
 }
 
 .attribution {
