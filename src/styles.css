@@ -67,6 +67,7 @@ header {
 main {
   background: var(--verypaleorange);
 }
+
 .graph {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -133,4 +134,27 @@ main {
 }
 .attribution a:hover {
   color: var(--softred);
+}
+
+@media (max-width: 475px) {
+  header {
+    margin-top: 5vh !important;
+  }
+
+  .container {
+    width: 94%;
+    margin: 1.5rem auto;
+    /* padding: 1rem; */
+  }
+  .amount--day {
+    width: 40px !important;
+  }
+
+  .graph {
+    gap: 2px;
+  }
+
+  .main--cost {
+    font-size: 2rem;
+  }
 }
