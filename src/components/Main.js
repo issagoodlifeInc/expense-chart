@@ -22,7 +22,7 @@ export default function Main(props) {
   // Styles to render the amount on top of each day onHover
   let amountShownStyle = {
     position: "absolute",
-    display: "none",
+    // display: "none",
     backgroundColor: "var(--darkbrown)",
     padding: ".2rem .4rem",
     color: "var(--verypaleorange)",
@@ -62,15 +62,15 @@ export default function Main(props) {
         <div
           className="amount--day"
           style={dayStyles}
-          onMouseOver={() => displayAmount()}
-          // onMouseEnter={() => setShowAmount(true)}
-          // onMouseLeave={() => setShowAmount(false)}
-          onMouseLeave={() => hideAmount()}
+          // onMouseOver={() => displayAmount()}
+          onMouseEnter={() => setShowAmount(true)}
+          onMouseLeave={() => setShowAmount(false)}
+          // onMouseLeave={() => hideAmount()}
         ></div>
-        {/* {showAmount && <div style={amountShownStyle}>{day.amount}</div>} */}
-        <div className="amount--show" style={amountShownStyle}>
+        {showAmount && <div style={amountShownStyle}>{day.amount}</div>}
+        {/* <div className="amount--show" style={amountShownStyle}>
           {day.amount}
-        </div>
+        </div> */}
         <p className="amount--text">{day.day}</p>
       </div>
     );
