@@ -31,7 +31,7 @@ data = [
     amount: 43.28,
   },
   {
-    id: 7,
+    id: 0,
     day: "sun",
     amount: 25.48,
   },
