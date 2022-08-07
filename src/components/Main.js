@@ -83,7 +83,7 @@ export default function Main(props) {
       <hr />
       <div className=" flex main--body">
         <div className="total-month">
-          <p className="main--text">Total this month</p>
+          <h2 className="main--text">Total this month</h2>
           <p className="main--cost">$478.33</p>
         </div>
         <div className="difference">

@@ -25,7 +25,10 @@ body {
   background: var(--cream);
 }
 
-p {
+p,
+.main--text,
+.main--cost,
+.percentage-difference {
   color: var(--mediumbrown);
 }
 
@@ -111,9 +114,13 @@ main {
 
 /* SHOW AMOUNT ON HOVER */
 
+.main--text {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
 .main--cost,
 .percentage-difference {
-  color: var(--darkbrown);
   font-weight: 700;
 }
 
