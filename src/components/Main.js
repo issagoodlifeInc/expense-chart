@@ -79,7 +79,7 @@ export default function Main(props) {
   return (
     <main className="container">
       <h1 className="main--title">Spending - Last 7 days</h1>
-      <section className="graph">{days}</section>
+      <div className="graph">{days}</div>
       <hr />
       <div className=" flex main--body">
         <div className="total-month">
