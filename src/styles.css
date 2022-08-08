@@ -122,6 +122,7 @@ main {
 .main--cost,
 .percentage-difference {
   font-weight: 700;
+  color: var(--darkbrown);
 }
 
 .main--cost {
